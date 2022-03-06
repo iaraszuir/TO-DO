@@ -7,10 +7,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lista de tareas</title>
     <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/datos.js"></script>
 </head>
 
 <body>
-
+    <div id="container">
+        <header>
+            <h1>COSAS IMPRESCINDIBLES</h1>
+            <form>
+                <input type="text" id="inputTarea">
+                <select id="selectorPrioridadTarea">
+                    <option value="diaria">DIARIO</option>
+                    <option value="mensual">MENSUAL</option>
+                    <option value="urgente">URGENTE</option>
+                    <label id="tareaseleccionada"></label>
+                </select>
+                <button type="button" id="btnGuardar">Guardar</button>
+            </form>
+        </header>
+        <main>
+            <div>
+                <form>
+                    <select id="selectorPrioridadBusqueda">
+                        <option value="urgente">URGENTE</option>
+                        <option value="diaria">Diaria</option>
+                        <option value="mensual">Mensual</option>
+                        <label id="prioridadSeleccionada"></label>
+                    </select>
+                    <input type="text" id="inputTareaBusqueda">
+                </form>
+            </div>
+            <div id="tareasPending"></div>
+        </main>
+    </div>
 
     <script src="./js/funciones.js"></script>
 </body>

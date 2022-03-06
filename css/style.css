@@ -1,0 +1,60 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    background-color: grey;
+    border: 10px solid black;
+}
+
+header h1{
+    color: rgb(33, 34, 37);
+    text-align: center;
+    padding-top: 10px;
+}
+header form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:30px ;
+    
+}
+header form input{
+
+    border: 3px solid slategrey;
+    margin-right: 20px;
+}
+
+header form button{
+
+    margin-left: 15px;
+    width: 100px;
+    height: 30px;
+    cursor: pointer;
+}
+
+main div form select{
+    margin-right: 10px;
+    width: 200px;
+}
+
+#tareasPending div{
+    display: flex ;
+    justify-content: center;
+    
+}
+#tareasPending button{
+    width: 20%;
+    border-radius: 0;
+    border:2px solid rgb(76, 61, 145);
+}
+ #tareasPending h2{
+    padding: 10px;
+    width: 80%;
+    height: 50px;
+    background-color: rgb(76, 76, 167);
+    color: beige;
+    
+}
