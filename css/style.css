@@ -1,60 +1,73 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+
+#container{
+background-color: rgba(129, 216, 168, 0.876);
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
 }
 
+
 header{
-    background-color: grey;
-    border: 10px solid black;
+    background-color: rgb(40, 100, 97);
+    width: 100%;
+    padding-top: 10px;
+     
 }
 
 header h1{
-    color: rgb(33, 34, 37);
+    color: rgb(176, 206, 193);
     text-align: center;
-    padding-top: 10px;
 }
 header form{
+    padding:30px ;
     display: flex;
     justify-content: center;
-    align-items: center;
-    padding:30px ;
+   
     
 }
 header form input{
 
-    border: 3px solid slategrey;
-    margin-right: 20px;
+    border: 3px solid slategrey li;
+    
 }
 
 header form button{
 
-    margin-left: 15px;
+    
     width: 100px;
-    height: 30px;
-    cursor: pointer;
+    height: 50px;
+   
 }
 
-main div form select{
-    margin-right: 10px;
-    width: 200px;
+
+
+div:first-child form select{
+
+    margin: 20px;
+    
 }
+
+div:first-child form input{
+   margin: 20px; }
 
 #tareasPending div{
     display: flex ;
     justify-content: center;
+    border:1px solid rgb(40, 100, 97);
     
 }
 #tareasPending button{
-    width: 20%;
-    border-radius: 0;
-    border:2px solid rgb(76, 61, 145);
+    width: 50%;
+    background-color:rgb(40, 100, 97) ;
+    color:white;   
+    font-size: 1.2em; 
+    
 }
  #tareasPending h2{
     padding: 10px;
     width: 80%;
     height: 50px;
-    background-color: rgb(76, 76, 167);
-    color: beige;
+    color: black;
     
 }

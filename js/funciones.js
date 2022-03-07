@@ -10,17 +10,35 @@ const inputTareaBuscada = document.getElementById('inputTareaBusqueda')
 
 
 function pintarTarea(pTarea) {
+
+
     const nombreTarea = document.createElement('h2')
     nombreTarea.innerText = pTarea.titulo;
     const btnDelete = document.createElement('button')
     btnDelete.innerText = 'Eliminar'
+
+    btnDelete.addEventListener('click', (event) => {
+        event.target.parentNode.remove()
+
+    })
+
+
     const prioridadTarea = document.createElement('p')
-    prioridadTarea.innerHTML = ''
+    prioridadTarea.innerHTML = '';
+
+
     const divTareasPending = document.createElement('div')
 
     divTareasPending.appendChild(nombreTarea)
     divTareasPending.appendChild(btnDelete)
 
+    if (pTarea.prioridad.toLowerCase() === 'diario') {
+        divTareasPending.style.backgroundColor = 'lightgreen';
+    } else if (pTarea.prioridad.toLowerCase() === 'urgente') {
+        divTareasPending.style.backgroundColor = 'lightcoral';
+    } else {
+        divTareasPending.style.backgroundColor = 'lightyellow'
+    }
     return divTareasPending;
 }
 
@@ -30,13 +48,17 @@ function printListaTareas(pListaTareas) {
     divLista.innerHTML = '';
 
     for (tarea of pListaTareas) {
-        const divTarea = pintarTarea(tarea)
-        divLista.appendChild(divTarea)
+
+
+
+        let divTarea = pintarTarea(tarea);
+        divLista.appendChild(divTarea);
     }
 
+
+
+
 }
-
-
 
 btnGuardar.addEventListener('click', guardaCampolabel)
 
@@ -86,14 +108,5 @@ inputTareaBuscada.addEventListener('input', (event) => {
 })
 
 
-//Borrar
-//Crear el boton
-//Borrar la tarea   
-//Borrar el padre del boton
-//Borrar la tarea del array
-
-/* if(tarea.prioridad===mensual){
-    divLista.style.backgroundColor
-} */
 
 printListaTareas(listaRutinas)

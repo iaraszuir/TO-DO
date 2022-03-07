@@ -2,7 +2,7 @@ let listaRutinas = new Array(
     {
         idRutina: 1,
         titulo: 'Comer',
-        prioridad: 'diaria'
+        prioridad: 'diario'
     },
 
     {
